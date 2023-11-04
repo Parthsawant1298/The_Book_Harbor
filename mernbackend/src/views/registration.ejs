@@ -1,0 +1,223 @@
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',  // Set the source language of your website.
+      includedLanguages: 'es,fr,de,hi',  // List of languages to offer for translation.
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    }, 'google_translate_element');
+  }
+
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Registration.css">
+    <title>Registration Page</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+      
+      #myVideo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.6); /* Adjust the scale factor as needed */
+        min-width: 100%;
+        min-height: 100%;
+      }
+
+  
+  
+  
+  h1{
+      font-size: 22px;
+    font-weight: 600;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+  }
+  p{
+      font-size: 15px;
+    font-weight: 200;
+    color: #000000;
+    font-family: 'Mukta', sans-serif;
+    
+  }
+  .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+  }
+  .registration{ 
+    border: white solid 1PX;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 5%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    width:400px;
+
+  }
+  p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    form .field {
+      margin-bottom: 20px;
+    }
+    form .input-field {
+      position: relative;
+      height: 40px;
+      width: 100%;
+    }
+    .input-field input {
+      height: 100%;
+      width: 85%;
+      outline: none;
+      border: none;
+      border-radius: 8px;
+      padding: 0 15px;
+      border: 1px solid #fff6f6;
+    }
+    .fa-solid {
+      color: #96140b;
+    }
+    .input-field .fa-regular  {
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #919191;
+      cursor: pointer;
+      padding: 3px;
+    }
+    .field .error {
+      display: flex;
+      align-items: center;
+      margin-top: 6px;
+      color: #d93025;
+      font-size: 13px;
+      display: none;
+    }
+    .invalid .error {
+      display: flex;
+    }
+    .error .fa-solid {
+      margin-right: 6px;
+      font-size: 15px;
+    }
+    .create-password .error {
+      align-items: flex-start;
+    }
+    .create-password .fa-solid {
+      margin-top: 4px;
+    }
+  
+  .button {
+      display: flex;
+      justify-content: center;
+      font-size: 1.3rem;
+      text-transform: capitalize;
+      letter-spacing: 1.5px;
+      padding: 6px 1.2px;
+  }
+  .button input {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #093b55;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button input:hover {
+    background-color: #a1d8f5;
+  }
+  
+  .button input:active {
+    transform: scale(0.95);
+  }
+  
+  .error-text{
+      font-size: 12px;
+  }
+  
+    </style>
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="/stylesheet/v3.mp4" type="video/mp4">
+  </video>
+  <div class="container">
+    <div class="registration">
+      <form action="/register" method="POST">
+        <h1>REGISTRATION</h1>
+        
+        <div class="field">
+          <div class="input-field">
+            <input type="text" placeholder="First Name" name="firstname" required />
+          </div>
+        </div>
+        <div class="field">
+          <div class="input-field">
+            <input type="text" placeholder="Last Name" name="lastname" required />
+          </div>
+        </div>
+        <div class="field email-field">
+          <div class="input-field">
+            <input type="email" placeholder="Enter your email" name="email" required />
+          </div>
+          <span class="error email-error">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p class="error-text">Please enter a valid email</p>
+          </span>
+        </div>
+        <div class="field create-password">
+          <div class="input-field">
+            <input type="password" placeholder="Create password" name="password" required />
+          </div>
+          <span class="error password-error">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p class="error-text">
+              Please enter at least 8 characters with a number, symbol, and capital letter.
+            </p>
+          </span>
+        </div>
+        <div class="field confirm-password">
+          <div class="input-field">
+            <input type="password" placeholder="Confirm password" name="confirmPassword" required />
+          </div>
+          <span class="error cPassword-error">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p class="error-text">Password doesn't match</p>
+          </span>
+        </div>
+        <div class="field gender-field">
+          <label>Gender:</label>
+          <br>
+          &nbsp;&nbsp;&nbsp;
+          <input type="radio" name="gender" value="male" id="male" required />
+          &nbsp;
+          <span id="male">Male</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="gender" value="female" id="female" required />
+          &nbsp;
+          <span id="female">Female</span>
+        </div>
+        <div class="input-field button">
+          <input type="submit" value="Register" />
+        </div>
+        <div class="login_signup">Already have an account? <a href="http://localhost:3000" class="login">Login</a></div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

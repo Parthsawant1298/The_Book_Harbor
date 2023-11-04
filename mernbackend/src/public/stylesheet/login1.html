@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content here -->
+    <style>
+      /* Reset some default browser styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      #myVideo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5); /* Adjust the scale factor as needed */
+        min-width: 100%;
+        min-height: 100%;
+      }
+      
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .registration {
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 5%;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 300px;
+        height: 320px;
+      }
+
+      h1 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .input-field {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .input-field input {
+        width: 85%;
+        height: 100%;
+        padding: 0 15px;
+        border: 1px solid #fff6f6;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+      }
+
+      .input-field .fa-regular {
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #919191;
+        cursor: pointer;
+        padding: 3px;
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        letter-spacing: 1.5px;
+        padding: 6px 1.2px;
+      }
+
+      .button input {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        background-color: #093b55;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 150px;
+      }
+
+      .button input:hover {
+        background-color: #a1d8f5;
+      }
+
+      .button input:active {
+        transform: scale(0.95);
+      }
+
+      .error-text {
+        font-size: 12px;
+      }
+      
+      /* Adjust the alignment of radio buttons and labels */
+      .input-field input[type="radio"] {
+        margin-right: 5px;
+        margin-top: 2px;
+      }
+    </style>
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="v6.mp4" type="video/mp4">
+  </video>
+  <div class="container">
+    <div class="registration">
+      <form action="/login" method="POST" id="loginForm">
+        <h1>Log In</h1>
+        <div class="input-field">
+          <label for="userRole">Login as:</label>
+          <input type="radio" name="userRole" value="buyer" id="buyerRadio" checked>
+          <label for="buyerRadio">BUYER</label>
+          <input type="radio" name="userRole" value="seller" id="sellerRadio">
+          <label for="sellerRadio">SELLER</label>
+          <input type="radio" name="userRole" value="admin" id="adminRadio">
+          <label for="adminRadio">ADMIN</label>
+        </div>
+        <div class="input-field button">
+          <input type="submit" value="LOGIN" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const buyerRadio = document.getElementById('buyerRadio');
+    const sellerRadio = document.getElementById('sellerRadio');
+    const adminRadio = document.getElementById('adminRadio');
+
+    loginForm.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      if (buyerRadio.checked) {
+        // Redirect to the buyer's login page
+        window.location.href = "http://localhost:3000";
+      } else if (sellerRadio.checked) {
+        // Redirect to the seller's login page
+        window.location.href = "selldisplay.html";
+      }
+      else if (adminRadio.checked) {
+        // Redirect to the seller's login page
+        window.location.href = "loginadmin.html";
+      }
+    });
+  </script>
+</body>
+</html>

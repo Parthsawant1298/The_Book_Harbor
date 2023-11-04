@@ -1,0 +1,146 @@
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',  // Set the source language of your website.
+      includedLanguages: 'es,fr,de,hi',  // List of languages to offer for translation.
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    }, 'google_translate_element');
+  }
+
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products</title>
+  <style>
+    /* Reset some default styles to ensure consistency */
+    body, h1, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Set a background color and font for the body */
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the page title */
+    h1 {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px 0;
+      background-color: #fff;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      color: #333;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    a:hover {
+      background-color: #555;
+    }
+
+    /* Style the "Add to Cart" button */
+    .add-to-cart-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #555;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .add-to-cart-button:hover {
+      background-color: #777;
+    }
+
+    /* Style the "Preview PDF" button */
+    .pdf-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #555;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    .pdf-link:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>BOOKS/NOTES</h1>
+  
+  <ul>
+    <% products.forEach(product => { %>
+      <li>
+        <h3><%= product.name %></h3>
+        <p>Price: INR<%= product.price %></p>
+        <p>Description: <%= product.description %></p>
+        <p>Image:</p>
+        <% if (product.image) { %>
+          <img src="/uploads/<%= product.image %>" alt="<%= product.name %> Image" width="200">
+        <% } else { %>
+          <p>No image available</p>
+        <% } %>
+        <p>PDF:</p>
+        <% if (product.pdf) { %>
+          <a class="pdf-link" href="/uploads/<%= product.pdf %>" target="_blank">Preview PDF</a>
+        <% } else { %>
+          <p>No PDF available</p>
+        <% } %>
+        <!-- Add to Cart button -->
+        <form action="/cart" method="POST">
+          <input type="hidden" name="productName" value="<%= product.name %>">
+          <input type="hidden" name="productPrice" value="<%= product.price %>">
+          <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="http://localhost:8080">Back</a>
+</body>
+</html>

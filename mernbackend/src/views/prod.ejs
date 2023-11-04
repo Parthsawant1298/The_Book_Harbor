@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="/stylesheet/prod.css">
+</head>
+<body>
+    <center>
+    <header>
+        <h1>FIRST YEAR ENGINEERING</h1>
+    </header>
+
+    <main>
+        <!-- Product Form -->
+        <h2><a href="/stylesheet/home1.html">LOGOUT</a></h2>
+        <h3>Add a New Book/Notes</h3>
+        <!-- Update the form action to match the route in prod.js -->
+        <form action="/prod" method="POST" enctype="multipart/form-data">
+            <label for="name">Product Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required>
+            <br><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <br><br>
+            
+            <label for="image">Image (JPG, PNG):</label>
+            <input type="file" name="image">
+            <br><br>
+        
+            <!-- Upload PDF -->
+            <label for="pdf">PDF File:</label>
+            <input type="file" name="pdf">
+            <br><br>
+        
+            <button type="submit">Add Product</button>
+            <br><br>
+            <!-- Add a link to navigate back to the product display page -->
+            <a href="http://localhost:7000/">View Product List</a>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Company Name</p>
+    </footer>
+</center>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',  // Set the source language of your website.
+      includedLanguages: 'es,fr,de,hi',  // List of languages to offer for translation.
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    }, 'google_translate_element');
+  }
+
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/stylesheet/login.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #myVideo {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.6); /* Adjust the scale factor as needed */
+        min-width: 100%;
+        min-height: 100%;
+      }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 80px;
+        }
+
+        .registration {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 5%;
+            padding: 20px; /* Increased padding for better spacing */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 300px;
+            max-width: 80%; /* Added maximum width for responsiveness */
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #000000;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .input-field {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .input-field input {
+            width: 250px;
+            height: 40px;
+            padding: 0 15px;
+            border: 1px solid #fff6f6;
+            border-radius: 8px;
+            outline: none;
+
+        }
+
+        .input-field label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            font-size: 1.3rem;
+            text-transform: capitalize;
+            letter-spacing: 1.5px;
+        }
+
+        .button input {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            background-color: #093b55;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button input:hover {
+            background-color: #a1d8f5;
+        }
+
+        .button input:active {
+            transform: scale(0.95);
+        }
+
+        .login_signup {
+            font-size: 16px;
+            color: #000000;
+            margin-top: 20px; /* Added margin for spacing */
+        }
+
+        .login_signup a {
+            text-decoration: none;
+            color: #093b55;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="/stylesheet/v4.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="registration">
+            <form action="/seller-login" method="POST">
+                <h1>Seller Login</h1>
+                <div class="input-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="input-field button">
+                    <input type="submit" value="LOG IN">
+                </div>
+                <div class="login_signup">Not a seller yet? <a href="http://localhost:4200" class="login">Register here</a></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

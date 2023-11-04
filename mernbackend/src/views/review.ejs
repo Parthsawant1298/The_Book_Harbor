@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+      * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .reviews {
+            margin: 20px;
+        }
+
+        .review {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .review h3 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .review p {
+            font-size: 16px;
+        }
+
+        .add-review {
+            margin: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>THE BOOK HARBOUR</h1>
+        <a href="http://localhost:8080">HOME</a>
+    </header>
+
+    <section class="add-review">
+        <!-- Review form -->
+        <form action="/review" method="POST" id="review-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">5 star</option>
+                <option value="4">4 star</option>
+                <option value="3">3 star</option>
+                <option value="2">2 star</option>
+                <option value="1">1 star</option>
+            </select>
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div id="reviews-list">
+            <!-- Reviews will be displayed here using EJS template -->
+            <% if (reviews && reviews.length > 0) { %>
+                <% reviews.forEach((review) => { %>
+                    <div class="review">
+                        <h3><%= review.username %></h3>
+                        <p>Rating: <%= review.rating %></p>
+                        <p><%= review.review %></p>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p>No reviews yet.</p>
+            <% } %>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript code for handling review submissions and displaying them
+        document.addEventListener("DOMContentLoaded", function () {
+            const reviewForm = document.getElementById("review-form");
+            const reviewsList = document.getElementById("reviews-list");
+
+            // Fetch and display reviews from your Express API endpoint here
+        });
+    </script>
+</body>
+</html>

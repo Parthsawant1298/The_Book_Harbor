@@ -1,0 +1,250 @@
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',  // Set the source language of your website.
+      includedLanguages: 'es,fr,de,hi',  // List of languages to offer for translation.
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    }, 'google_translate_element');
+  }
+
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BOOK HARBOUR</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+
+    <!-------- font awesome cdn link --------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+
+    <!------- swipper cdn link ------------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <form action="/index" method="POST"></form>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="/stylesheet/the book harbour_logo.png.png"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               
+                  <li class="nav-item">
+                    <a class="nav-link" href="#category">CATEGORY</a>
+                  </li>
+                  
+                    <li class="nav-item">
+                      <a class="nav-link" href="http://localhost:7070">REVIEWS</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:5050">CONTACT US</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/cart">CART</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/stylesheet/home1.html">LOGOUT</a>
+                            </li>
+          
+         
+          
+            <li class="nav-item">
+              <a class="nav-link disabled" arial-disabled="true"></a>
+            </li>
+        </ul>
+        <form action="/search" method="POST">
+          <input type="text" id="searchInput" name="searchQuery" placeholder="Search..." class="search-bar">
+          <button type="submit" class="search-button">Search</button>
+          
+        </form>
+      
+        
+        <script>
+ document.addEventListener("DOMContentLoaded", function () {
+  // Get the search input and form elements
+  const searchInput = document.getElementById("searchInput");
+  const searchForm = document.querySelector("form[role='search']");
+
+  // Add an event listener for form submission
+  searchForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the user's search query
+    const query = searchInput.value.trim();
+
+    // Perform your search logic here (e.g., redirect to a search results page or display results on the current page)
+    // For demonstration purposes, you can display an alert with the search query
+    alert("You searched for: " + query);
+  });
+});
+
+</script>
+
+              </div>
+            </div>
+          </div>
+          </nav>
+          <div class="p-3 mb-2 bg-danger-subtle text-emphasis-danger">THE BOOK HARBOUR :THE MOST CONVINIENT AND USERFRIENDLY WEBSITE !!!!!</div>
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <video id="background-video" autoplay loop muted plays-inline class="hero-section">
+                  <source src="/stylesheet/video (1080p) (1).mp4" type="video/mp4">
+                </video>
+                </div>
+              <div class="carousel-item active">
+                <video id="background-video" autoplay loop muted plays-inline class="hero-section">
+                  <source src="/stylesheet/video3.mp4" type="video/mp4">
+                </video>
+                
+              </div>
+              <div class="carousel-item active">
+                <video id="background-video" autoplay loop muted plays-inline class="hero-section">
+                  <source src="/stylesheet/video1.mp4" type="video/mp4">
+                </video>
+                 </div>
+                 
+              <!--
+              <div class="carousel-item active">
+                <img src="/stylesheet/hi.png" class="hero-section" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/stylesheet/bg (4) - Copy.png" class="hero-section" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/stylesheet/backimage.png" class="hero-section" alt="...">
+              </div>
+            </div>-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <section id="category">
+          <div class="p-3 mb-2 bg-danger-subtle text-emphasis-danger">
+              <li> CATEGORIES :</li>
+                </div>
+         
+          </div>
+          <div class="shop-section">
+            <div class="box1 box">
+              <a class="nav-link" href="http://localhost:7000/">ENGINEERING FIRST YEAR</a>
+           
+            </div>
+            <div class="box2 box">
+              <a class="nav-link" href="http://localhost:7000/">ENGINEERING SECOND YEAR </a>
+           
+           
+            </div>
+            <div class="box3 box">
+              <a class="nav-link" href="http://localhost:7000/">ENGINEERING THIRD YEAR </a>
+           
+           
+            </div>
+            <div class="box4 box">
+              <a class="nav-link" href="http://localhost:7000/">ENGINEERING FOURTH YEAR </a>
+           
+           
+            </div>
+            </div>
+          
+   
+<!--------REVIEW----->
+<section id="reviews">
+  <div class="container">
+    <h1 class="title text-center">WHAT CLIENT SAYS !!!</h1>
+    <div class="row offset-1">
+      <div class="col-md-3 reviews">
+<p>SUPERB WEBSITE !!!</p>
+<img src="/stylesheet/elon.png">
+<p class="user-details"><b>Elon Musk</b><br> CEO of TESLA </p>
+      </div>
+      <div class="col-md-3 reviews">
+        <p>NICE WEBSITE !!!!!!!!!!!!</p>
+        <img src="/stylesheet/sundar.png">
+        <p class="user-details"><b>Sundar Pichai</b><br> CEO of GOOGLE </p>
+              </div>
+              <div class="col-md-3 reviews">
+                <p>BEST WEBSITE !!!!!!!!!!!!</p>
+                <img src="/stylesheet/neal.png">
+                <p class="user-details"><b>Neal Mohan</b><br> CEO of YOUTUBE</p>
+                      </div>
+                      <div class="col-md-3 reviews">
+                        <p>GOOD WEBSITE !!!!!!!!!!!!</p>
+                        <img src="/stylesheet/warren.png">
+                        <p class="user-details"><b>Warren Buffett</b><br> CEO BERKSHIRE </p>
+                              </div>
+    </div>
+  </div>
+</section>
+    <!----------social media-->
+    <section id="social-media">
+      <div class="container text-center">
+        <p>FIND US ON SOCIAL MEDIA</p>
+        <div class="social-icons">
+          <a href="#"><img src="/stylesheet/twitter-icon.png"></a>
+          <a href="https://instagram.com/parthsawant1298?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D
+"><img src="/stylesheet/instagram-icon.png"></a>
+          <a href="#"><img src="/stylesheet/linkedin-icon.png"</a>
+          <a href="#"><img src="/stylesheet/facebook-icon.png"></a>
+          <a href="#"><img src="/stylesheet/whatsapp-icon.png"></a>
+          <a href="#"><img src="/stylesheet/snapchat-icon.png"></a>
+        </div>
+
+      </div>
+
+    </section>
+    <!-------Footer section----->
+    <section id="footer">
+      <img src="/stylesheet/wave2.png" class="footer-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-box">
+            <img src="/stylesheet/the book harbour_logo.png.png">
+            <p>**ALL RIGHTS RESERVERD**</p>
+          </div>
+          <div class="col-md-4 footer-box">
+            <p><b>CONTACT US</b></p>
+            <P><i class="fa fa-map-marker"></i>WORLD TRADE CENTER, MUMBAI</P>
+            <P><i class="fa fa-phone"></i>+1 9833245671</P>
+            <P><i class="fa fa-envelope"></i>book harbour@gmail.com</P>
+              
+          </div>
+          <div class="col-md-4 footer-box">
+            <p><b>SUBSCRIPTION</b></p>
+            <input type="Email" class="form-control" placeholder="Your Email">
+              <button type="button" class="btn btn-primary">SUSCRIBE</button>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">WEBSITE CREATED BY CODING MINIONS</p>
+      </div>
+
+    </section>
+    <!------smooth scroll---->
+    <script src="smooth-scroll.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    
+</body>
+</html>

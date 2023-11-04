@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: bisque;
+    
+}
+
+  
+/* Style for the search input */
+.search-bar {
+    width: 200px; /* Adjust the width as needed */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 12px;
+     /* Remove the input focus outline */
+  }
+  
+  /* Style for the search button */
+  .search-button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    /*padding: 10px 15px;*/
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+  
+  /* Style on hover for the search button */
+ 
+.nav{
+    position: fixed;
+    height: auto;
+    width: auto;
+    
+}
+.navbar{
+
+    background-image:linear-gradient(to right,#2b202c,#0d0212) ;
+    padding:0 !important;
+    height: auto;
+    width: auto;
+    position: fixed;
+}
+.navbar-brand img{
+    height:40px;
+    padding-right: 40px;
+
+}
+.navbar-nav li
+{
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    color: aliceblue !important;
+    font-weight: 600;
+}
+.navbar-toggler{
+    padding-right: 20px;
+}
+
+
+<!-------banner section---->
+#banner{
+    background-color: bisque;
+    color: white;
+    padding-top: 5%;
+
+}
+.promo-title{
+    font-size: 40px;
+    font-weight:600px;
+    margin-top: 60px;
+}
+.bottom-img{
+    width:100%;
+}
+.p-3 mb-2 bg-danger-subtle text-emphasis-danger {
+    font-size: medium;
+}
+.category{
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+.hero-section{
+    /*background-image:url("hero.png");*/
+    background-size:cover;
+    height: 550px;
+    width:100%;
+    
+    
+}
+.shop-section{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(237, 227, 227);
+}
+.box{
+    border:4px solid black;
+    height:250px;
+    width: 22%;
+    background-color:white;
+border-radius:10px;
+    padding: 20px 0px 15px;
+    margin-top: 20px;
+    margin-bottom: 20PX;
+    text-align: center;
+    box-shadow:10px 10px 10px;
+}
+.box-img{
+    height: 160px;
+    background-image:cover;
+    background-repeat: no-repeat;
+
+    margin-top: 15px;
+
+}
+.box-content{
+    margin-left:1rem;
+    margin-right:1rem;
+}
+#background-video {
+    width: 100%;
+    height:600px;
+    object-fit: cover;
+  }
+  
+
+/*--------REVIEW---------*/
+#reviews{
+margin: 80px 0;
+padding-bottom:200px ;
+padding-top:200px ;
+overflow-x: auto;
+
+
+}
+.reviews{
+    border-left: 4px solid #7b1798;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.reviews img{
+height: 60px;
+width: 60px;
+border-radius: 50%;
+margin: 0 10px;
+
+}
+.user-details{
+    display: inline-block;
+    font-size: 12px;
+}
+.social-icons img{
+    width: 60px;
+    transition: 0.5s;
+    margin-top: 10PX;
+}
+.social-icons a:hover img
+{
+    transform: translateY(-10px);
+}
+/*-------footer------*/
+#footer{
+    background-image:linear-gradient(to right,#271e29,#07020a) ;
+    color: white;
+    margin-top: 100px;
+}
+.footer-img{
+    width: 100%;
+}
+.footer-box{
+padding: 20px;
+}
+.footer-box img{
+width: 120px;
+margin-bottom: 20px;
+}
+.footer-box .fa{
+margin-right:8px ;
+font-size:25px ;
+height: 40px;
+width: 40px;
+text-align: center;
+padding-top: 7px;
+border-radius: 2px;
+background-image:linear-gradient(to right,#360d3d,#090909);
+}
+.form-control .footer-box{
+box-shadow: none !important;
+border: none;
+border-radius: 0;
+margin-top: 25px;
+max-width: 250px;
+}
+.footer-box .btn-primary{
+box-shadow: none;
+border: none;
+border-radius: 0;
+margin-top: 30px;
+background-image:linear-gradient(to right,#331c35,#030105) ;
+
+}
+hr{
+background-color: white;
+}
+.copyright{
+    margin-bottom:0 ;
+    padding-bottom:20px ;
+text-align: center;
+}
+
+
+
+

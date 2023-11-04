@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first year</title>
+</head>
+<body>
+    <ul>
+        <% products.forEach(function(product) { %>
+            <li>
+                <h3><%= product.name %></h3>
+                <p>Price: $<%= product.price %></p>
+                <p>Description: <%= product.description %></p>
+            </li>
+        <% }); %>
+    </ul>
+    <a class="nav-link" href="http://localhost:8080">back </a>
+</body>
+</html>

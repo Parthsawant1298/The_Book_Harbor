@@ -1,0 +1,39 @@
+{
+  "name": "mernbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js",
+    "dev1": "nodemon src/login.js",
+    "dev2":"nodemon src/registration.js",
+    "dev3":"nodemon src/produ.js",
+    "dev4":"nodemon src/display.js",
+    "dev5":"nodemon src/display1.js",
+    "dev6":"nodemon src/seller-registration.js",
+    "dev7":"nodemon src/seller-login.js",
+    "dev8":"nodemon src/sell.js",
+    "dev9":"nodemon src/contact-us.js",
+    "dev10":"nodemon src/review.js"
+    
+   
+   
+    
+    
+    
+    
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^7.5.2",
+    "nodemon": "^3.0.1"
+  }
+}

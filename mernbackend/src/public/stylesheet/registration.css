@@ -1,0 +1,75 @@
+/* Reset some default browser styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: transparent;
+  background-image: url("bo.png");
+  background-size: cover;
+}
+
+/* Style the form box */
+.form-box {
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  width: 400px;
+  background-color:transparent;
+}
+
+/* Style the heading */
+h1 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Style labels and input fields */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #007BFF;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Style the link for registration */
+a.link {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a.link:hover {
+  text-decoration: underline;
+}
